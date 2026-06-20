@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base"],
+  "extends": ["config:recommended"],
   "timezone": "Europe/Prague",
   "schedule": ["after 08:00 before 18:00 every weekday"],
   "rangeStrategy": "pin",
@@ -15,48 +15,48 @@
     {
       "groupName": "React core & types",
       "matchFileNames": ["template/package.json"],
-      "matchPackagePatterns": [
-        "^react$",
-        "^react-dom$",
-        "^@types/react$",
-        "^@types/react-dom$"
+      "matchPackageNames": [
+        "/^react$/",
+        "/^react-dom$/",
+        "/^@types/react$/",
+        "/^@types/react-dom$/"
       ]
     },
 
     {
       "groupName": "Rsbuild (core + plugins)",
       "matchFileNames": ["template/package.json"],
-      "matchPackagePatterns": [
-        "^@rsbuild/core$",
-        "^@rsbuild/plugin-react$",
-        "^@rsbuild/plugin-sass$"
+      "matchPackageNames": [
+        "/^@rsbuild/core$/",
+        "/^@rsbuild/plugin-react$/",
+        "/^@rsbuild/plugin-sass$/"
       ]
     },
 
     {
       "groupName": "TypeScript & ESLint toolchain",
       "matchFileNames": ["template/package.json"],
-      "matchPackagePatterns": [
-        "^typescript$",
-        "^eslint$",
-        "^@typescript-eslint/",
-        "^eslint-plugin-(import|react|react-hooks|jsx-a11y)$",
-        "^@stylistic/eslint-plugin$",
-        "^globals$",
-        "^eslint-plugin-interface-to-type$"
-      ],
-      "matchDepTypes": ["devDependencies"]
+      "matchDepTypes": ["devDependencies"],
+      "matchPackageNames": [
+        "/^typescript$/",
+        "/^eslint$/",
+        "/^@typescript-eslint//",
+        "/^eslint-plugin-(import|react|react-hooks|jsx-a11y)$/",
+        "/^@stylistic/eslint-plugin$/",
+        "/^globals$/",
+        "/^eslint-plugin-interface-to-type$/"
+      ]
     },
 
     {
       "groupName": "Stylelint",
       "matchFileNames": ["template/package.json"],
-      "matchPackagePatterns": [
-        "^stylelint$",
-        "^stylelint-config-standard-scss$",
-        "^stylelint-scss$"
-      ],
-      "matchDepTypes": ["devDependencies"]
+      "matchDepTypes": ["devDependencies"],
+      "matchPackageNames": [
+        "/^stylelint$/",
+        "/^stylelint-config-standard-scss$/",
+        "/^stylelint-scss$/"
+      ]
     },
 
     {
